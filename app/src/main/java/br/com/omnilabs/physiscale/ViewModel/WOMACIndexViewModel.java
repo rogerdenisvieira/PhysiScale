@@ -1,4 +1,4 @@
 package br.com.omnilabs.physiscale.ViewModel;
 
-public class WOMACScaleViewModel {
+public class WOMACIndexViewModel {
 }

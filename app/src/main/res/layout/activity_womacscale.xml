@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Activity.WOMACIndexActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="womacviewmodel"
+            type="br.com.omnilabs.physiscale.ViewModel.WOMACIndexViewModel"/>
+    </data>
+
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -20,6 +22,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:orientation="vertical">
+
+
 
 
             <TextView
@@ -80,8 +84,20 @@
                     android:text="Muito Intensa" />
             </RadioGroup>
 
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{womacviewmodel.seekDisplay}" />
 
-
+            <SeekBar
+                android:id="@+id/seekBar"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:min="0"
+                android:max="4"
+                android:progress="@={womacviewmodel.seekValue}" />
 
             <TextView
                 android:id="@+id/textView"
@@ -174,8 +190,4 @@
 
         </LinearLayout>
     </ScrollView>
-
-
-
-
-</android.support.constraint.ConstraintLayout>
+</layout>

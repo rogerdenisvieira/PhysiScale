@@ -10,6 +10,6 @@ public class WOMACIndexActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_womacscale);
+        setContentView(R.layout.activity_womacindex);
     }
 }
